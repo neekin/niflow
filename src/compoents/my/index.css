@@ -1,0 +1,100 @@
+.my .header {
+  height: 192px;
+  display: flex;
+  background-color: #F3494A;
+  padding: 20px 0 0 20px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.my .header .headimg img {
+  width: 78px;
+  border-radius: 50%;
+}
+
+.my .header .headimg {
+  height: 80px;
+}
+
+.my .header .linkman {
+  padding: 20px 0 0 10px;
+  height: 80px;
+}
+
+.my .header .linkman .phonenum {
+  font-size: 16px;
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.my .header .linkman .invitaionCode {
+  color: #FAB6B6;
+  font-size: 15px;
+}
+
+.my .info {
+  width: 356px;
+  background-color: #fff;
+  height: 157px;
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  margin-left: -178px;
+  border: 1px solid #f0f0f0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.my .info .money {
+  width: 100%;
+  box-sizing: border-box;
+  padding-top: 28px;
+}
+
+.my .info .money .withdrawable,
+.my .info .money .todayEarn {
+  display: inline-block;
+  width: 50%;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.my .info .money .withdrawable .text,
+.my .info .money .todayEarn .text {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.my .info .menu {
+  display: flex;
+  flex-direction: row;
+}
+
+.my .info .menu .btn .btnimg img {
+  height: 38px;
+  width: 38px;
+}
+
+.my .info .menu .btn .btntxt {
+  margin-top: 4px;
+}
+
+.my .info .menu .btn {
+  margin-top: 20px;
+  width: 25%;
+  text-align: center;
+}
+
+.my .menulist {
+  margin-top: 130px;
+}
+
+.my .menulist .am-list .am-list-body::before,
+.my .menulist .am-list .am-list-body::after,
+.my .menulist .am-list .am-list-line::after {
+  content: none;
+}
