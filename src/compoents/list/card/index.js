@@ -1,7 +1,13 @@
 import React from 'react'
 import './index.css'
+import axios from 'axios'
 import { Card, WhiteSpace, WingBlank, Tag } from 'antd-mobile'
 class IndexListItem extends React.Component {
+  testClick = () => {
+    axios.get('/api/test').then(res => {
+      console.log(res)
+    })
+  }
   render() {
     return (
       <WingBlank size="lg">
@@ -9,6 +15,7 @@ class IndexListItem extends React.Component {
         <Card>
           <Card.Body>
             <div className="info">
+              <button onClick={this.testClick}>测试一下</button>
               <div className="img">
                 <img src={require('./imgs/0.jpeg')} alt="" />
               </div>
