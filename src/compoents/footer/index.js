@@ -1,10 +1,9 @@
 import React from 'react'
 import { TabBar } from 'antd-mobile'
-
+import { withRouter } from 'react-router-dom'
+@withRouter
 class PageFooter extends React.Component {
   render() {
-    // const pathname = children.props.location.pathname
-    // console.log(pathname)
     const pathname = window.location.pathname
     return (
       <footer>
@@ -37,7 +36,7 @@ class PageFooter extends React.Component {
             }
             selected={pathname === '/'}
             onPress={() => {
-              window.location = '/'
+              this.props.history.push('/')
             }}
           />
           <TabBar.Item
@@ -63,7 +62,7 @@ class PageFooter extends React.Component {
             }
             selected={pathname === '/makeMoney'}
             onPress={() => {
-              window.location = '/makeMoney'
+              this.props.history.push('/makeMoney')
             }}
           />
           <TabBar.Item
@@ -93,7 +92,7 @@ class PageFooter extends React.Component {
             key="my"
             selected={pathname === '/my'}
             onPress={() => {
-              window.location = '/my'
+              this.props.history.push('/my')
             }}
             icon={
               <div

@@ -15,7 +15,6 @@ class IndexListItem extends React.Component {
         <Card>
           <Card.Body>
             <div className="info">
-              <button onClick={this.testClick}>测试一下</button>
               <div className="img">
                 <img src={require('./imgs/0.jpeg')} alt="" />
               </div>

@@ -55,7 +55,13 @@ class MyPage extends React.Component {
 
         <div className="menulist">
           <List>
-            <List.Item arrow="horizontal" multipleLine onClick={() => {}}>
+            <List.Item
+              arrow="horizontal"
+              multipleLine
+              onClick={() => {
+                this.props.history.push('myads')
+              }}
+            >
               我的广告
             </List.Item>
             <List.Item arrow="horizontal" multipleLine onClick={() => {}}>

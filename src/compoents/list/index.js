@@ -1,18 +1,18 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import IndexListItem from './card'
 
 class IndexList extends React.Component {
   render() {
     return (
-      <div>
+      <Fragment>
         <IndexListItem />
         <IndexListItem />
         <IndexListItem />
         <IndexListItem />
         <IndexListItem />
         <IndexListItem />
-      </div>
+      </Fragment>
     )
   }
 }

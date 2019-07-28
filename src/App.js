@@ -1,14 +1,16 @@
 import React from 'react'
-import { NavBar } from 'antd-mobile'
+
+import Bscroll from 'better-scroll'
 import { BrowserRouter, Route, Switch as RSwitch } from 'react-router-dom'
 import './App.css'
+import PageFooter from './compoents/footer'
+import PageHeader from './compoents/header'
 
 import IndexList from './compoents/list'
 import MyPage from './compoents/my'
-import PageFooter from './compoents/footer'
-
-import Bscroll from 'better-scroll'
-
+import MyAds from './compoents/myads'
+import PushAd from './compoents/pushad'
+import Detail from './compoents/Marketingdetails'
 class App extends React.Component {
   componentDidMount() {
     this.setState({
@@ -24,15 +26,16 @@ class App extends React.Component {
   }
 
   render() {
-    // const { pathname } = this.location
-    console.log('当前的路径是', this.location)
     return (
       <BrowserRouter>
         <div className="App">
-          <NavBar mode="dark">全名信息流</NavBar>
+          <PageHeader />
           <div className="content bscroll" ref="bscroll">
             <div className="bscroll-container">
               <RSwitch>
+                <Route path="/detail/:id" component={Detail} />
+                <Route path="/pushad" component={PushAd} />
+                <Route path="/myads" component={MyAds} />
                 <Route path="/my" component={MyPage} />
                 <Route path="/" component={IndexList} />
               </RSwitch>
